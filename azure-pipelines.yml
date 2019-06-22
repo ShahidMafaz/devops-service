@@ -31,7 +31,7 @@ stages:
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(tag)
+          latest
     - task: AzureWebAppContainer@1
       inputs:
         azureSubscription: 'Free Trial (a04157a8-b39e-4d9a-969f-6ce4016594ed)'
