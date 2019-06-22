@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace devops_service.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class metainfoController : ControllerBase
     {
