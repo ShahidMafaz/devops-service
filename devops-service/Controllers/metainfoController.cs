@@ -15,10 +15,15 @@ namespace devops_service.Controllers
         public ActionResult<string> Get()
         {
             var servicevalue = ConfigurationManager.AppSetting["ServiceInfo:Version"];
+            var servicedescription = ConfigurationManager.AppSetting["ServiceInfo:Version"];
+            var serviceframework = ConfigurationManager.AppSetting["ServiceInfo:Framework"];
+            var servicedeployment = ConfigurationManager.AppSetting["ServiceInfo:DeploymentMethod"];
             var outputstring = @"Service Name : Devops Service {0} 
             Version : {1} {0} 
-            Commit HASH : test";
-            string serviceinfo = string.Format(outputstring,Environment.NewLine,servicevalue);
+            Description : {2} {0} 
+            Framework : {3} {0} 
+            Deployment Method : {4} ";
+            string serviceinfo = string.Format(outputstring,Environment.NewLine,servicevalue,servicedescription,serviceframework,servicedeployment);
             return Ok(serviceinfo);
         }
 

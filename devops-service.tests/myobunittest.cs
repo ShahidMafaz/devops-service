@@ -30,16 +30,6 @@ namespace Tests
      
         }
 
-        // [Fact]
-        // public void TestMetainfoEndpointStatus()
-        // {
-        //     //Arrange
-        //     var Controller = new metainfoController();
-        //     //Act
-        //     var Result = Controller.Get();
-        //     //Assert
-        //     Assert.IsType<OkObjectResult>(Result.Result);
-     
-        // }
+   
     }
 }
